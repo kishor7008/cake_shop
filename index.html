@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop</title>
+    <link href="cake.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:ital,wght@0,300;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="cake_collection">
+        <div class="heading">
+            <div class="logo">
+                <img src="https://js-beginners.github.io/grocery-cart-project/img/logo.svg" />
+            </div>
+            <div class="navbar">
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">store</a>
+            </div>
+            <div class="contact">
+                <div class="contact_info">
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <div class="contact_num">+ 123 456 789</div>
+                </div>
+                <div class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div id="total">2 Items - $21.98</div>
+                </div>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <!-- --------------------------------cart items---------------------- -->
+        <div class="cart_item ">
+            <div class="cart1">
+                <img src="https://js-beginners.github.io/grocery-cart-project/img-cart/cake-2.jpeg" />
+                <div class="cart_name">
+                    <p>cart item</p>
+                    <span>$10.99</span>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <div class="cart1">
+                <img src="https://js-beginners.github.io/grocery-cart-project/img-cart/cake-2.jpeg" />
+                <div class="cart_name">
+                    <p>cart item</p>
+                    <span>$10.99</span>
+                </div>
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+
+            <div class="total">
+                <div class="total_cart">Total</div>
+                <div class="price">$21.98</div>
+            </div>
+            <div class="check">
+                <button>clear cart</button>
+                <button class="cheekout">checkout</button>
+            </div>
+
+        </div>
+        <!-- --------------------------------cart items---------------------- -->
+
+        <!-- ----------------------------home content------------------ -->
+    </div>
+    <div class="home" id="home">
+        <div class="home_text">
+            <h4>Welcome To<span>Grandma's</span></h4>
+            <a href="#">explore</a>
+        </div>
+    </div>
+
+    <!--------------------about -------------------------->
+
+    <div class="about">
+        <div class="about_content">
+            <h1>About<span>Us</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam esse architecto dolor, illum tenetur
+                veritatis non voluptatum porro sapiente nisi repellendus consequuntur et, nulla ipsum vero amet
+                cupiditate fuga rerum?</p>
+            <a href="#">explore</a>
+        </div>
+
+        <div class="about_img">
+            <img src="https://js-beginners.github.io/grocery-cart-project/img/sweets-1.jpeg" />
+        </div>
+
+    </div>
+
+    <!-- ----------------------------home content------------------ -->
+
+    <div class="container">
+        <h3>Our <span>Store</span></h3>
+        <div class="navlinks">
+            <li onclick="show()">ALL</li>
+            <li onclick="cakeShow(`Cake`)">CAKES</li>
+            <li onclick="cakeShow(`Cupcake`)">CUPCAKES</li>
+            <li onclick="cakeShow(`Sweet`)">SWEETS</li>
+            <li onclick="cakeShow(`Dougnut`)">DOUGHNUTS</li>
+        </div>
+
+        <div class="search_box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="search here.............." />
+        </div>
+    </div>
+
+
+    <div class="product_list">
+        <div class="content">
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
+                        class="icon ion-social-snapchat"></i></a><a href="#"><i
+                        class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</ba></li>
+            </ul>
+            <p class="copyright">Company Name © 2018</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="cake.js"></script>
+</body>
+
+</html>
