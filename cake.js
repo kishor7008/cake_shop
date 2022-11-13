@@ -13,7 +13,7 @@ const cartH=(id)=>{
     .then((res)=>res.json())
     .then((data)=>{
         let { img, name, price } = data;
-        console.log(img)
+        // console.log(img)
         let itemCost = parseInt(price);
        let div = document.createElement("div");
         div.classList.add("cart1");
@@ -24,7 +24,7 @@ const cartH=(id)=>{
           <span>$${price}</span>
       </div>
       <i class="fa-solid fa-trash-can"></i>
-//       `
+      `
             let pos = cartList.firstElementChild;
             count++;
             coin = coin + itemCost;
@@ -78,7 +78,7 @@ const show=()=>{
             // console.log(id)
         })
     })
-    cartH()
+
 }
 show();
 
@@ -88,7 +88,7 @@ const cakeShow=(k)=>{
    fetch('https://cake-shop-7008.herokuapp.com/list')
     .then((res)=>res.json())
     .then((data)=>{
-        let cakeItem = arr.filter(item => item.name === `${k} Item`);
+        let cakeItem = data.filter(item => item.name === `${k} Item`);
         cakeItem.map((item) => {
             
                     let { id, img, name, price } = item;
@@ -96,22 +96,21 @@ const cakeShow=(k)=>{
                     let box = document.createElement('div');
                     box.classList.add('box');
                     box.innerHTML = `
-               <div class="image">
-                               <img src="${img}" alt="">
-                               <div class="cart_logo">
-                                   <i class="fa-solid fa-cart-shopping" id="${id}" onclick="cartH(${id})></i>
-                               </div>
-                           </div>
-                           <div class="cart_content">
-                               <div>${name}</div>
-                               <div class="cost">$${price}</div>
-                           </div>
-               `
-                    list.append(box);
+    <div class="image">
+                    <img src="${img}" alt="">
+                    <div class="cart_logo">
+                        <i class="fa-solid fa-cart-shopping" id="${id}" onclick="cartH(${id})"></i>
+                    </div>
+                </div>
+                <div class="cart_content">
+                    <div>${name}</div>
+                    <div class="cost">$${price}</div>
+                </div>`
+            list.append(box);
                 })
-        console.log(cakeItem)
+        // console.log(cakeItem)
     })
-    cartH()
+    
 }
 // adding cart on click of cart logo
 
